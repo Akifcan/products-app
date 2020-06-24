@@ -1,0 +1,1 @@
+export const API_URL = 'https://sea-api-backend.herokuapp.com/api/apis/hepsiburada-api'

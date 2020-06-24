@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Montserrat&display=swap");
+header {
+  padding: 1em;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header h2 {
+  color: white;
+}
+
+header img {
+  cursor: pointer;
+}
+
+.logo-text {
+  cursor: pointer;
+  font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+.promo, .product {
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.promo {
+  height: 80vh;
+}
+
+.promo a {
+  text-align: center;
+}
+
+.product {
+  padding-bottom: 6em;
+  height: 100vh;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2em;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  height: 10vh;
+  background-color: whitesmoke;
+}
+
+.menu a {
+  color: black;
+  font-size: 2em;
+}
+
+.product-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: .5em;
+}
+
+.product-list .product-card {
+  height: 60vh;
+  width: 100%;
+  border-bottom: 2px solid crimson;
+}
+
+.product-list .product-card h2 {
+  font-size: 1em;
+}
+
+.product-list .product-card .product-image {
+  height: 30vh;
+}
+
+.product-list .product-card .product-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-list .product-card .product-info {
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.product-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+}
+
+.product-detail .product-images {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.product-detail .product-images .current-image {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-detail .product-images .current-image:hover {
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation: onImageHover 5s alternate;
+          animation: onImageHover 5s alternate;
+}
+
+@-webkit-keyframes onImageHover {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+
+@keyframes onImageHover {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
+
+.product-detail .product-images .preview-images {
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-detail .product-images .preview-images img {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #353b48;
+  background-blend-mode: darken;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-detail .product-images .preview-images img:hover {
+  opacity: .7;
+}
+
+.product-detail .product-infos {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 600px) {
+  .product-list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: .5em;
+            column-gap: .5em;
+  }
+  .product-detail {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .product-detail .product-infos {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .product-detail .product-infos * {
+    margin: 2em;
+  }
+  .product-detail .product-images .current-image {
+    height: 60vh;
+  }
+  .product-detail .product-images .preview-images {
+    -ms-grid-columns: 150px 150px 150px;
+        grid-template-columns: 150px 150px 150px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #353b48;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 1em;
+  background-color: crimson;
+  color: white;
+  border-radius: .5em;
+}
+
+.container {
+  width: 80%;
+  margin: 1em auto;
+  color: white;
+}
+
+.container h1 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.container h1::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  -webkit-transform: translate(20%, 10%);
+          transform: translate(20%, 10%);
+  right: 0;
+  height: 10px;
+  width: 80%;
+  background-color: crimson;
+}
+/*# sourceMappingURL=style.css.map */

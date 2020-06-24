@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Montserrat&display=swap');
+@import './partials/variables';
+@import './partials/header';
+@import './partials/product';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $primary-color;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    padding: 1em;
+    background-color: crimson;
+    color: white;
+    border-radius: .5em;
+}
+
+.container{
+    width: 80%;
+    margin: 1em auto;
+    color: white;
+    h1{
+        display: inline-block;
+        position: relative;
+        margin-bottom: 2em;
+        &::before{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            transform: translate(20%, 10%);
+            right: 0;
+            height: 10px;
+            width: 80%;
+            background-color: crimson;
+        }
+    }
+}
